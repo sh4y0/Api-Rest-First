@@ -23,9 +23,7 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
 	@Transactional
 	public List<E> findAll() throws Exception {
 		try {
-
-			List<E> entities = baseRepository.findAll();
-			return entities;
+			return baseRepository.findAll();
 
 		} catch (Exception e) {
 
@@ -40,7 +38,7 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
 		try {
 
 			Optional<E> entityOptional = baseRepository.findById(id);
-			System.out.println(entityOptional.get());
+			//System.out.println(entityOptional.get());
 			return entityOptional.get();
 			
 		} catch (Exception e) {
